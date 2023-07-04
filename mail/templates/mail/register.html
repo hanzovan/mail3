@@ -1,0 +1,55 @@
+{% extends "mail/layout.html" %}
+{% block title %}
+
+    register
+
+{% endblock %}
+{% block main %}
+
+    <h1 class="page-title">Register</h1>
+    <div class="form">
+        <form action="{% url 'mail:register' %}" method="post">
+            {% csrf_token %}
+            <div class="input-line">
+                <div class="input-left">
+                    <p>Username</p>
+                </div>
+                <input class="input-box" name="username" type="text" autocomplete="off" autofocus> 
+                <div class="input-right">
+                    <p>Your nickname or short name</p>
+                </div>
+            </div>
+            <div class="input-line">
+                <div class="input-left">
+                    <p>Your email</p>
+                </div>
+                <input class="input-box" name="email" type="email" autocomplete="off">
+                <div class="input-right">
+                    <p>Should be check correctly</p>
+                </div>
+            </div>
+            <div class="input-line">
+                <div class="input-left">
+                    <p>Password</p>
+                </div>
+                <input class="input-box" name="password" type="password" autocomplete="off">
+                <div class="input-right">
+                    <p>Should be at least 1 special character, 1 number, 1 alphabet, and at least 6 characters in total</p>
+                </div>
+            </div>
+            <div class="input-line">
+                <div class="input-left">
+                    <p>Confirm password</p>
+                </div>
+                <input class="input-box" name="confirm" type="password" autocomplete="off">
+                <div class="input-right">
+                    <p>Should be the same with your password</p>
+                </div>
+            </div>
+            <div class="register-btn">
+                <button>Register</button>
+            </div>
+        </form>
+    </div>
+
+{% endblock %}

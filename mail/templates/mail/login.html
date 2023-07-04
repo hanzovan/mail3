@@ -1,0 +1,33 @@
+{% extends "mail/layout.html" %}
+{% block title %}
+
+    login
+
+{% endblock %}
+{% block main %}
+
+    <h1 class="page-title">Login</h1>
+    <div class="form">
+        <form action="{% url 'mail:login' %}" method="post">
+            {% csrf_token %}
+            <div class="input-line">
+                <div class="input-left">
+                    <p>Username</p>
+                </div>
+                <input class="input-box" name="username" type="text" autofocus autocomplete="off">
+            </div>
+            <div class="input-line">
+                
+                <div class="input-left">
+                    <p>Password</p>
+                </div>
+                <input class="input-box" name="password" type="password" autocomplete="off">
+                
+            </div>
+            <div class="login-btn">
+                <button>Log in</button>
+            </div>
+        </form>
+    </div>
+
+{% endblock %}

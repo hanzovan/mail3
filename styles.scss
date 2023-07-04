@@ -1,0 +1,84 @@
+$normal-text-color: blue;
+$big-text-color: orange;
+%normal-text {
+    font-family: sans-serif;
+    font-style: bold;
+    font-size: 22px;
+}
+%big-text {
+    font-family: sans-serif;
+    font-size: 36px;
+    font-weight: 900px;
+}
+%line {
+    clear: both;
+    vertical-align: baseline;
+    padding: 30px 0 30px 0;
+    margin: 20px 0 20px 150px;
+}
+%line-left {
+    float: left;
+    min-width: 0;
+    width: 22%;
+    height: 42px;
+
+    line-height: 45px;
+
+    vertical-align: middle;
+}
+%line-middle {
+    float: left;
+    display: block;
+    min-width: 167px;
+    min-height: 41px;
+    height: 5px;
+    width: 250px;
+    margin-right: 50px;
+}
+%line-right {
+    display: inline-block;
+
+    min-width: 167px;
+    min-height: 41px;
+    height: 42px;
+    width: 40%;
+    line-height: 45px;
+}
+
+
+body {
+    @extend %normal-text;
+    color: $normal-text-color;
+}
+main {
+    min-height: 600px;
+}
+.page-title {
+    @extend %big-text;
+    color: brown;
+    margin: 30px 0 50px 550px;
+}
+.input-line {
+    @extend %line;
+}
+.input-left {
+    @extend %line-left;
+    @extend %normal-text;
+    font-weight: 900;
+}
+.input-box {
+    @extend %line-middle;
+    
+    border: 1px solid grey;
+    @extend %normal-text;
+    padding: 0 20px 0 20px;
+}
+.input-right {
+    @extend %line-right;
+    font-size: 13px;
+    font-style: italic;
+    color: grey;
+}
+.register-btn, .login-btn, .compose-btn {
+    margin: 70px 0 150px 450px;
+}

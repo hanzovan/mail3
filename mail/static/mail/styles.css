@@ -1,0 +1,67 @@
+body, .input-left, .input-box {
+  font-family: sans-serif;
+  font-style: bold;
+  font-size: 22px; }
+
+.page-title {
+  font-family: sans-serif;
+  font-size: 36px;
+  font-weight: 900px; }
+
+.input-line {
+  clear: both;
+  vertical-align: baseline;
+  padding: 30px 0 30px 0;
+  margin: 20px 0 20px 150px; }
+
+.input-left {
+  float: left;
+  min-width: 0;
+  width: 22%;
+  height: 42px;
+  line-height: 45px;
+  vertical-align: middle; }
+
+.input-box {
+  float: left;
+  display: block;
+  min-width: 167px;
+  min-height: 41px;
+  height: 5px;
+  width: 250px;
+  margin-right: 50px; }
+
+.input-right {
+  display: inline-block;
+  min-width: 167px;
+  min-height: 41px;
+  height: 42px;
+  width: 40%;
+  line-height: 45px; }
+
+body {
+  color: blue; }
+
+main {
+  min-height: 600px; }
+
+.page-title {
+  color: brown;
+  margin: 30px 0 50px 550px; }
+
+.input-left {
+  font-weight: 900; }
+
+.input-box {
+  border: 1px solid grey;
+  padding: 0 20px 0 20px; }
+
+.input-right {
+  font-size: 13px;
+  font-style: italic;
+  color: grey; }
+
+.register-btn, .login-btn, .compose-btn {
+  margin: 70px 0 150px 450px; }
+
+/*# sourceMappingURL=styles.css.map */
